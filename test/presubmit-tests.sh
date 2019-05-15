@@ -230,7 +230,11 @@ function main() {
   while [[ $# -ne 0 ]]; do
     local parameter=$1
     case ${parameter} in
-      --tests) RUN_TESTS=1 ;;
+      --build-tests) ;;
+      --unit-tests) ;;
+      --integration-tests) ;;
+      --emit-metrics) ;;
+      --tests) RUN_TESTS=1 ;; 
       --all-tests)
         RUN_TESTS=1
         ;;
